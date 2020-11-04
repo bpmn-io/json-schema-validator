@@ -1,0 +1,74 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "title": "Foo Schema",
+  "description": "A foo element template schema",
+  "required": [
+    "id",
+    "name",
+    "properties"
+  ],
+  "properties": {
+    "name": {
+      "$id": "#/name",
+      "type": "string"
+    },
+    "foo": {
+      "$id": "#/foo",
+      "type": "string"
+    },
+    "id": {
+      "$id": "#/id",
+      "type": "string"
+    },
+    "properties": {
+      "$id": "#/properties",
+      "type": "array",
+      "default": [],
+      "items": {
+        "$id": "#/properties/property",
+        "type": "object",
+        "title": "element template property",
+        "description": "A property defined for the element template",
+        "default": {},
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "Number"
+                }
+              },
+              "required": [
+                "type"
+              ]
+            },
+            "then": {
+              "properties": {
+                "name": {
+                  "pattern": "^(number_)",
+                  "errorMessage": "must start with <number_>"
+                }
+              }
+            }
+          }
+        ],
+        "properties": {
+          "name": {
+            "$id": "#/properties/property/name",
+            "type": "string"
+          },
+          "type": {
+            "$id": "#/properties/property/type",
+            "type": "string",
+            "enum": [
+              "String",
+              "Number"
+            ],
+            "errorMessage": "invalid property type ${0}; must be any of { String, Number }" 
+          }
+        }
+      }
+    }
+  }
+}

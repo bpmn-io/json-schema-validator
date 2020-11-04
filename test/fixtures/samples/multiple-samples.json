@@ -1,0 +1,89 @@
+[
+  {
+    "name": "Mail Task",
+    "id": "com.example.MailTask",
+    "properties": [
+      {
+        "name": "implementationType",
+        "type": "String"
+      },
+      {
+        "name": "sender",
+        "type": "String"
+      },
+      {
+        "name": "number_receivers",
+        "type": "Number"
+      },
+      {
+        "name": "template",
+        "type": "String"
+      },
+      {
+        "name": "resultStatus",
+        "type": "String"
+      },
+      {
+        "name": "sendAsync",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "ConnectorGetTask",
+    "id": "my.connector.http.get.Task",
+    "properties": []
+  },
+  {
+    "name": "AsyncAwesomeTask",
+    "id": "com.example.AwesomeTask",
+    "properties": [
+      {
+        "name": "are you awesome?",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "Custom ServiceTask",
+    "id": "com.example.CustomServiceTask",
+    "properties": [
+      {
+        "name": "Delegate to Call",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "Check Invoice Task",
+    "id": "com.example.CheckInvoiceTask",
+    "properties": [
+      {
+        "name": "Candidate Users",
+        "type": "String"
+      },
+      {
+        "name": "Candidate Groups",
+        "type": "String"
+      },
+      {
+        "name": "Task Priority",
+        "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "Field Injections",
+    "id": "com.example.FieldInjections",
+    "properties": [
+      {
+        "name": "Field Injection String",
+        "type": "String"
+      },
+      {
+        "name": "Field Injection Expression",
+        "type": "String"
+      }
+    ]
+  }
+]
