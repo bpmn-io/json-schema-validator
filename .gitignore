@@ -1,0 +1,7 @@
+node_modules/
+dist/
+coverage/
+.idea
+*.iml
+.DS_Store
+.nyc_output

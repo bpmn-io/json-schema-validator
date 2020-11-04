@@ -1,0 +1,14 @@
+{
+  "name": "No Foo",
+  "id": "com.example.NoFoo",
+  "properties": [
+    {
+      "name": "foo",
+      "type": "String"
+    },
+    {
+      "name": "number_bar",
+      "type": "Number"
+    }
+  ]
+}

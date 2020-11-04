@@ -1,0 +1,14 @@
+{
+  "name": "Invalid Type",
+  "id": "com.example.InvalidType",
+  "properties": [
+    {
+      "name": "foo",
+      "type": "String"
+    },
+    {
+      "name": "bar",
+      "type": "Bar"
+    }
+  ]
+}

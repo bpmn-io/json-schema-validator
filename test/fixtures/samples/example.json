@@ -1,0 +1,15 @@
+{
+  "name": "Example Template",
+  "id": "com.example.Template",
+  "properties": [
+    {
+      "name": "foo",
+      "type": "String"
+    },
+    {
+      "name": "number_bar",
+      "type": "Number"
+    }
+  ],
+  "foo": "bar"
+}

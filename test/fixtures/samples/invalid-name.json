@@ -1,0 +1,10 @@
+{
+  "name": "Invalid Number",
+  "id": "com.example.InvalidNumber",
+  "properties": [
+    {
+      "name": "foo",
+      "type": "Number"
+    }
+  ]
+}

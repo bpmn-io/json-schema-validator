@@ -1,0 +1,6 @@
+{
+  "name": "Additional Property",
+  "id": "com.example.AdditionalProperty",
+  "properties": [],
+  "bar": "bar"
+}

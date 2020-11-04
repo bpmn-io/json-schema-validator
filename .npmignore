@@ -1,0 +1,8 @@
+test/
+lib/
+.eslintignore
+.eslintrc
+.travis.yml
+rollup.config.js
+.nyc_output
+coverage
