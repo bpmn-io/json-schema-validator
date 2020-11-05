@@ -2,9 +2,10 @@ import { expect } from 'chai';
 
 import { map, keys } from 'min-dash';
 
-import Validator from '../../lib';
+import { Validator } from '../../lib';
 
 import schema from '../fixtures/json-schema/schema.json';
+
 
 describe('Validator', function() {
 
