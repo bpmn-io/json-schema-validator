@@ -20,7 +20,7 @@ describe('Validator', function() {
 
   describe('#validateAll', function() {
 
-    it('should validate all', function() {
+    it('should validate without errors', function() {
 
       // given
       const samples = require('../fixtures/samples/multiple-samples.json');
@@ -36,10 +36,12 @@ describe('Validator', function() {
       expect(results.length).to.eql(samples.length);
 
       expect(results.every(r => r.valid)).to.be.true;
+
+      expect(results.map(r => r.object)).to.eql(samples);
     });
 
 
-    it('should validate all - errors', function() {
+    it('should validate with errors', function() {
 
       // given
       const samples = require('../fixtures/samples/multiple-errors.json');
@@ -56,6 +58,29 @@ describe('Validator', function() {
       expect(results.map(r => r.valid)).to.eql([
         false, false, true, true, true, false
       ]);
+
+      expect(results.map(r => r.object)).to.eql(samples);
+    });
+
+
+    it('should provide all valid objects', function() {
+
+      // given
+      const samples = require('../fixtures/samples/multiple-errors.json');
+
+      // when
+      const {
+        results
+      } = validator.validateAll(samples);
+
+      // then
+      const validObjects = results.filter(r => r.valid).map(r => r.object);
+
+      expect(validObjects).to.eql([
+        samples[2],
+        samples[3],
+        samples[4]
+      ]);
     });
 
   });
@@ -71,11 +96,13 @@ describe('Validator', function() {
       // when
       const {
         errors,
+        object,
         valid
       } = validator.validate(sample);
 
       // then
       expect(valid).to.be.true;
+      expect(object).to.equal(sample);
       expect(errors).not.to.exist;
     });
 
@@ -88,6 +115,7 @@ describe('Validator', function() {
       // when
       const {
         errors,
+        object,
         valid
       } = validator.validate(sample);
 
@@ -95,6 +123,8 @@ describe('Validator', function() {
 
       // then
       expect(valid).to.be.false;
+      expect(object).to.equal(sample);
+
       expect(normalizedErrors).to.eql([{
         message: 'must start with <number_>'
       }]);
