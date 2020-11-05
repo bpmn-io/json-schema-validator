@@ -4,7 +4,7 @@
 
 Validate JSON based on [JSON Schema](https://json-schema.org/) files.
 
-## Installation 
+## Installation
 
 ```sh
 $ npm i --save @bpmn-io/json-schema-validator
@@ -12,12 +12,12 @@ $ npm i --save @bpmn-io/json-schema-validator
 
 ## Usage
 
-Given 
+Given
 * an [example JSON schema](./test/fixtures/json-schema/schema.json)
 * an [example JSON object](./test/fixtures/samples/invalid-name.json)
 
 ```js
-import Validator from '@bpmn-io/json-schema-validator';
+import { Validator } from '@bpmn-io/json-schema-validator';
 
 import schema from './test/fixtures/json-schema/schema.json';
 
@@ -40,7 +40,7 @@ if (!valid) {
 
 This will print detailed information about errors inside the sample
 
-```js
+```json
 [
   {
     "message": "must start with <number_>",
