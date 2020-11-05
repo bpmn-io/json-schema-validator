@@ -79,12 +79,12 @@ const validator = new Validator({
 });
 
 const {
-  validObjects,
-  erroredObjects
+  valid,
+  results
 } = validator.validateAll(samples);
 
-if (erroredObjects.length) {
-  console.error('Invalid JSON objects detected:', erroredObjects);
+if (!valid) {
+  console.error('Invalid JSON objects detected:', results.filter(r => !r.valid));
 }
 
 ```
