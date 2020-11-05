@@ -24,7 +24,9 @@ export default [
       { file: pkg.module, format: 'es' }
     ],
     external: [
-      'min-dash'
+      'min-dash',
+      'ajv',
+      'ajv-errors'
     ],
     plugins: pgl()
   }
