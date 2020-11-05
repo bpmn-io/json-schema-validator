@@ -27,13 +27,15 @@ describe('Validator', function() {
 
       // when
       const {
-        validObjects,
-        erroredObjects
+        valid,
+        results
       } = validator.validateAll(samples);
 
       // then
-      expect(erroredObjects).to.be.empty;
-      expect(validObjects).to.deep.equal(samples);
+      expect(valid).to.be.true;
+      expect(results.length).to.eql(samples.length);
+
+      expect(results.every(r => r.valid)).to.be.true;
     });
 
 
@@ -44,13 +46,16 @@ describe('Validator', function() {
 
       // when
       const {
-        validObjects,
-        erroredObjects
+        valid,
+        results
       } = validator.validateAll(samples);
 
       // then
-      expect(erroredObjects).to.have.length(3);
-      expect(validObjects).to.have.length(3);
+      expect(valid).to.be.false;
+
+      expect(results.map(r => r.valid)).to.eql([
+        false, false, true, true, true, false
+      ]);
     });
 
   });
