@@ -91,7 +91,7 @@ if (!valid) {
 
 ## Example JSON Schemas
 
-* [@camunda/element-templates-json-schema](https://github.com/bpmn-io/element-templates-json-schema)
+* [@camunda/element-templates-json-schema](https://github.com/camunda/element-templates-json-schema)
 
 ## License
 
