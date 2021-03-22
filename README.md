@@ -1,6 +1,6 @@
 # json-schema-validator
 
-[![Build Status](https://travis-ci.com/bpmn-io/json-schema-validator.svg?branch=main)](https://travis-ci.com/bpmn-io/json-schema-validator)
+[![CI](https://github.com/bpmn-io/json-schema-validator/workflows/CI/badge.svg)](https://github.com/bpmn-io/json-schema-validator/actions?query=workflow%3ACI)
 
 Validate JSON based on [JSON Schema](https://json-schema.org/) files.
 
