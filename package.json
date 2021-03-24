@@ -43,8 +43,8 @@
     "rollup": "^2.42.2"
   },
   "dependencies": {
-    "ajv": "^7.2.3",
-    "ajv-errors": "^2.0.1",
+    "ajv": "^6.12.6",
+    "ajv-errors": "^1.0.1",
     "min-dash": "^3.7.0"
   }
 }
