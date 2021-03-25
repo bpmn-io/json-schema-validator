@@ -6,6 +6,10 @@ All notable changes to [json-schema-validator](https://github.com/bpmn-io/json-s
 
 ___Note:__ Yet to be released changes appear here._
 
+## 0.2.1
+
+* `CHORE`: downgrade to `ajv@6` ([#4](https://github.com/bpmn-io/json-schema-validator/pull/4))
+
 ## 0.2.0
 
 * `CHORE`: migrate to `ajv@7` ([`9ff049b0`](https://github.com/bpmn-io/json-schema-validator/commit/9ff049b0b5f10d78ca89028c3338cff0df4689de))
