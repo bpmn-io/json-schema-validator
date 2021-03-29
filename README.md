@@ -46,6 +46,12 @@ This will print detailed information about errors inside the sample
     "message": "must start with <number_>",
     "keyword": "errorMessage",
     "dataPath": "/properties/0/name",
+    "dataPointer": {
+      "key": { "line": 5, "column": 6, "pos": 97 },
+      "keyEnd": { "line": 5, "column": 12, "pos": 103 },
+      "value": { "line": 5, "column": 14, "pos": 105 },
+      "valueEnd": { "line": 5, "column": "19", "pos": 110 }
+    },
     "schemaPath": "#/properties/properties/items/allOf/0/then/properties/name/errorMessage",
     "params": {
       "rawErrors": [
