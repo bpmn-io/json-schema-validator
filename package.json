@@ -45,6 +45,7 @@
   "dependencies": {
     "ajv": "^6.12.6",
     "ajv-errors": "^1.0.1",
+    "json-source-map": "^0.6.1",
     "min-dash": "^3.7.0"
   }
 }

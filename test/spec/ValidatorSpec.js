@@ -132,6 +132,28 @@ describe('Validator', function() {
     });
 
 
+    it('should set data pointer', function() {
+
+      // given
+      const sample = require('../fixtures/samples/invalid-name.json');
+
+      // when
+      const {
+        errors,
+      } = validator.validate(sample);
+
+      const error = errors[0];
+
+      // then
+      expect(error.dataPointer).to.eql({
+        key: { line: 5, column: 6, pos: 97 },
+        keyEnd: { line: 5, column: 12, pos: 103 },
+        value: { line: 5, column: 14, pos: 105 },
+        valueEnd: { line: 5, column: 19, pos: 110 }
+      });
+    });
+
+
     it('should validate required properties', function() {
 
       // given
